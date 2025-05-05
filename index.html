@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>リスタート相談室</title>
+  <meta name="description" content="借金減額、返済支援、資金調達の相談窓口">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="krbVnVajqqlZznpnS7uvaV-CA6IW99dhkeRLc-wmSqs">
+  <!-- OGP タグ -->
+  <meta property="og:title" content="リスタート相談室">
+  <meta property="og:description" content="借金減額、返済支援、資金調達の相談窓口">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:image" content="https://your-domain.com/images/ogp-image.jpg">
+  <meta property="og:site_name" content="リスタート相談室">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- CSS ファイル -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex min-h-screen flex-col bg-slate-50 font-noto">
+  <!-- ヘッダー -->
+  <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur shadow-sm">
+    <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-5xl">
+      <div class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-blue-700">リスタート相談室</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://lin.ee/a6iPVTy" class="bg-blue-700 hover:bg-blue-800 h-9 px-4 hidden sm:flex text-white rounded-md font-medium items-center gap-2 transition-all">
+          無料相談
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button id="menuToggle" class="md:hidden" aria-label="メニュー">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- モバイルメニュー -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white w-full border-t border-gray-100 shadow-lg">
+      <div class="container mx-auto px-4 py-3">
+        <a href="https://lin.ee/a6iPVTy" class="block py-2 px-4 text-blue-700 font-medium hover:bg-blue-50 rounded-md">
+          無料相談はこちら
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section - Blue diagonal -->
+  <section class="relative w-full overflow-hidden bg-gradient-to-br from-blue-700 to-blue-900 pt-16 pb-32">
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-slate-50" style="clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%)"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-6 inline-block rounded-full bg-blue-800 px-3 py-1 text-sm font-medium text-white">
+          ピンチをチャンスに
+        </div>
+        <h1 class="mb-6 text-white font-bold tracking-tighter max-w-full" style="font-size: clamp(1.5rem, 5vw, 3.75rem); line-height: 1.2">
+          <span class="block text-[1.75rem] xs:text-[2rem] sm:text-[2.25rem] md:text-[2.5rem] lg:text-[3rem]">
+            お悩み相談窓口
+          </span>
+        </h1>
+        <div class="mb-8 flex justify-center">
+          <div class="relative h-48 w-full max-w-md overflow-hidden rounded-xl bg-white shadow-lg">
+            <img src="images/money-consultation.png" alt="借金減額・返済支援・資金調達" class="object-cover w-full h-full rounded-xl">
+          </div>
+        </div>
+        <div class="mb-8 grid grid-cols-3 gap-2 sm:gap-4 w-full max-w-md">
+          <div class="rounded-xl bg-white p-2 sm:p-3 text-center shadow-md flex items-center justify-center transition-transform hover:scale-105">
+            <div class="text-xs sm:text-sm font-bold text-blue-700">借金減額</div>
+          </div>
+          <div class="rounded-xl bg-white p-2 sm:p-3 text-center shadow-md flex items-center justify-center transition-transform hover:scale-105">
+            <div class="text-xs sm:text-sm font-bold text-blue-700">返済支援</div>
+          </div>
+          <div class="rounded-xl bg-white p-2 sm:p-3 text-center shadow-md flex items-center justify-center transition-transform hover:scale-105">
+            <div class="text-xs sm:text-sm font-bold text-blue-700">資金調達</div>
+          </div>
+        </div>
+        <a href="https://lin.ee/a6iPVTy" class="bg-amber-500 hover:bg-amber-600 text-white text-base sm:text-lg h-12 px-4 sm:px-6 rounded-xl shadow-md transition-transform hover:scale-105 inline-flex items-center gap-2">
+          今すぐ相談する
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section - White diagonal -->
+  <section class="relative w-full overflow-hidden bg-slate-50 pt-16 pb-32">
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-blue-700" style="clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%)"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+      <div class="flex flex-col items-center text-center">
+        <h2 class="mb-12 text-xl sm:text-2xl font-bold text-gray-800">こんなお悩みありませんか？</h2>
+        <div class="mb-16 flex justify-center">
+          <div class="relative max-w-md">
+            <div class="mb-8 flex items-center justify-center">
+              <div class="relative h-40 w-full">
+                <img src="images/problems-image.png" alt="お悩みありませんか？" class="object-cover w-full h-full rounded-xl shadow-md">
+              </div>
+            </div>
+            <div class="mb-8 rounded-xl bg-amber-50 p-4 text-left shadow-sm border border-amber-100">
+              <p class="text-base sm:text-lg font-medium text-gray-800">
+                時計を担保に融資を受けるはずだったが、商品だけ持ち去られ返済だけが残った…
+              </p>
+            </div>
+            <div class="mb-8 rounded-xl bg-amber-50 p-4 text-left shadow-sm border border-amber-100">
+              <p class="text-base sm:text-lg font-medium text-gray-800">
+                お小遣い案件のはずが、支払いが上回り資金が底をついた…
+              </p>
+            </div>
+            <div class="mb-8 rounded-xl bg-amber-50 p-4 text-left shadow-sm border border-amber-100">
+              <p class="text-base sm:text-lg font-medium text-gray-800">
+                どこからも借りられず、生活費も事業資金も足りない…
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section - Blue diagonal -->
+  <section id="features" class="relative w-full overflow-hidden bg-gradient-to-br from-blue-700 to-blue-800 pt-16 pb-32">
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-slate-50" style="clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%)"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-12 max-w-2xl">
+          <div class="mb-8 flex justify-center">
+            <div class="relative h-40 sm:h-48 w-40 sm:w-48 overflow-hidden rounded-xl bg-white shadow-lg">
+              <img src="images/service.png" alt="サービスを体験すると" class="object-cover w-full h-full rounded-xl">
+            </div>
+          </div>
+          <h2 class="mb-4 text-white font-bold text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] whitespace-normal sm:whitespace-nowrap">
+            サービスを体験すると
+          </h2>
+        </div>
+        <div class="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl bg-white p-4 sm:p-6 shadow-lg transition-transform hover:scale-105">
+            <div class="mb-4 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-5 sm:h-6 w-5 sm:w-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-base sm:text-lg font-bold text-left text-gray-800">借金完済 → 資産運用へ</h3>
+            <p class="text-sm sm:text-base text-gray-600 text-left">
+              最大数百万円の借金を完済し、貯金と投資で生活を立て直すことも夢ではありません。
+            </p>
+          </div>
+          <div class="rounded-xl bg-white p-4 sm:p-6 shadow-lg transition-transform hover:scale-105">
+            <div class="mb-4 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-5 sm:h-6 w-5 sm:w-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-base sm:text-lg font-bold text-left text-gray-800">生活が安定、余裕ある日々へ</h3>
+            <p class="text-sm sm:text-base text-gray-600 text-left">
+              固定費を見直し、以前は足りなかった生活費が毎月しっかり回るようになります。
+            </p>
+          </div>
+          <div class="rounded-xl bg-white p-4 sm:p-6 shadow-lg transition-transform hover:scale-105">
+            <div class="mb-4 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-5 sm:h-6 w-5 sm:w-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-base sm:text-lg font-bold text-left text-gray-800">事業資金を確保し、売上もUP</h3>
+            <p class="text-sm sm:text-base text-gray-600 text-left">
+              あきらめかけていた方でも資金調達に成功した事例多数。経営資源の改善も可能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshots - White diagonal -->
+  <section class="relative w-full overflow-hidden bg-slate-50 pt-16 pb-32">
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-blue-700" style="clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%)"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+      <div id="benefits" class="flex flex-col items-center">
+        <div class="mb-12 max-w-md">
+          <div class="mb-12 flex justify-center">
+            <div class="relative flex">
+              <img src="images/moc.png" alt="相談窓口アプリ画面" class="object-contain rounded-xl shadow-lg" width="250" height="500">
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <h2 class="mb-4 text-xl sm:text-2xl font-bold text-gray-800">
+              専門知識と実体験を
+              <br>
+              組み合わせたサポート
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Detail - Blue diagonal -->
+  <section class="relative w-full overflow-hidden bg-gradient-to-br from-blue-700 to-blue-800 pt-16 pb-32">
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-slate-50" style="clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%)"></div>
+    <div class="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-12 rounded-xl bg-white p-4 sm:p-6 shadow-lg">
+          <div class="mb-4 flex items-center">
+            <div class="mr-4 flex h-8 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-800">信頼：クレーム０</h3>
+          </div>
+          <div class="mb-4 rounded-xl bg-slate-100 p-4 flex justify-center">
+            <div class="relative h-32 sm:h-40 w-full max-w-xs">
+              <svg viewBox="0 0 200 120" class="h-full w-full" fill="none">
+                <rect x="10" y="10" width="180" height="100" rx="8" fill="#E5E7EB" />
+                <rect x="20" y="20" width="160" height="15" rx="4" fill="#1D4ED8" />
+                <rect x="20" y="45" width="70" height="55" rx="4" fill="#BFDBFE" />
+                <rect x="100" y="45" width="80" height="10" rx="4" fill="#EFF6FF" />
+                <rect x="100" y="65" width="80" height="10" rx="4" fill="#EFF6FF" />
+                <rect x="100" y="85" width="80" height="10" rx="4" fill="#EFF6FF" />
+                <circle cx="55" cy="72" r="15" fill="#1D4ED8" />
+                <path d="M50 72L54 76L60 68" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">
+            過去にトラブルのあった案件は、一切紹介しません。不安が多い方が多いからこそ、信頼を最も大切にしております。
+          </p>
+        </div>
+
+        <div class="mb-12 rounded-xl bg-white p-4 sm:p-6 shadow-lg">
+          <div class="mb-4 flex items-center">
+            <div class="mr-4 flex h-8 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-800">実体験：経験者だからこその寄り添い</h3>
+          </div>
+          <div class="mb-4 rounded-xl bg-slate-100 p-4 flex justify-center">
+            <div class="relative h-32 sm:h-40 w-full max-w-xs">
+              <svg viewBox="0 0 200 120" class="h-full w-full" fill="none">
+                <circle cx="100" cy="60" r="25" fill="#1D4ED8" />
+                <circle cx="50" cy="40" r="15" fill="#3B82F6" />
+                <circle cx="150" cy="40" r="15" fill="#3B82F6" />
+                <circle cx="40" cy="90" r="15" fill="#3B82F6" />
+                <circle cx="160" cy="90" r="15" fill="#3B82F6" />
+                <circle cx="70" cy="100" r="10" fill="#BFDBFE" />
+                <circle cx="130" cy="100" r="10" fill="#BFDBFE" />
+                <line x1="100" y1="60" x2="50" y2="40" stroke="#1D4ED8" stroke-width="2" />
+                <line x1="100" y1="60" x2="150" y2="40" stroke="#1D4ED8" stroke-width="2" />
+                <line x1="100" y1="60" x2="40" y2="90" stroke="#1D4ED8" stroke-width="2" />
+                <line x1="100" y1="60" x2="160" y2="90" stroke="#1D4ED8" stroke-width="2" />
+                <line x1="100" y1="60" x2="70" y2="100" stroke="#1D4ED8" stroke-width="2" />
+                <line x1="100" y1="60" x2="130" y2="100" stroke="#1D4ED8" stroke-width="2" />
+                <path d="M95 60C95 57.2386 97.2386 55 100 55C102.761 55 105 57.2386 105 60C105 62.7614 102.761 65 100 65C97.2386 65 95 62.7614 95 60Z" fill="white" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">
+            同じように悩んだ経験があるからこそ、表面的な話だけではなく、踏み込んだ話まで相談に乗ることができます。
+          </p>
+        </div>
+
+        <div class="mb-12 rounded-xl bg-white p-4 sm:p-6 shadow-lg">
+          <div class="mb-4 flex items-center">
+            <div class="mr-4 flex h-8 sm:h-10 w-8 sm:w-10 items-center justify-center rounded-full bg-blue-100">
+              <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-800">継続：黒字化・安定まで伴走</h3>
+          </div>
+          <div class="mb-4 rounded-xl bg-slate-100 p-4 flex justify-center">
+            <div class="relative h-32 sm:h-40 w-full max-w-xs">
+              <svg viewBox="0 0 200 120" class="h-full w-full" fill="none">
+                <rect x="30" y="20" width="140" height="80" rx="8" fill="#EFF6FF" />
+                <rect x="40" y="30" width="120" height="60" rx="4" fill="#3B82F6" />
+                <path d="M50 70L70 50L90 60L110 40L130 30" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="50" cy="70" r="4" fill="white" />
+                <circle cx="70" cy="50" r="4" fill="white" />
+                <circle cx="90" cy="60" r="4" fill="white" />
+                <circle cx="110" cy="40" r="4" fill="white" />
+                <circle cx="130" cy="30" r="4" fill="white" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">「借りて終わり」ではなく、実際に黒字になり安定するまでサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA - White section -->
+  <section id="contact" class="relative w-full overflow-hidden bg-slate-50 pt-16 pb-24">
+    <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="mb-8">
+          <div class="inline-block">
+            <div class="relative h-48 sm:h-60 w-full max-w-md mx-auto overflow-hidden rounded-xl bg-white shadow-lg">
+              <img src="images/customer-voice-image.png" alt="成長する未来" class="object-cover w-full h-full rounded-xl">
+            </div>
+          </div>
+        </div>
+        <h2 class="mb-4 font-bold text-gray-800" style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2">
+          <span class="block text-[1.5rem] xs:text-[1.75rem] sm:text-[2rem] md:text-[2.25rem]">
+            お客様の声
+          </span>
+        </h2>
+
+        <div class="mb-8 grid gap-4 md:grid-cols-2">
+          <!-- お客様の声カード（モバイル最適化のため、スクロール可能なコンテナに変更） -->
+          <div class="testimonial-card rounded-xl bg-white p-4 sm:p-6 text-left shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex items-center mb-3">
+              <div class="text-amber-500 flex">
+                <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <svg viewBox="0 0 24 24" class="h-4 sm:h-5 w-4 sm:w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold mb-2">「投資詐欺の借金から完全復活」</h3>
+            <div class="bg-slate-50 p-3 rounded-md mb-3">
+              <p class="text-xs sm:text-sm text-gray-700">
+                投資詐欺に遭い借金がかさんでしまい生活が不可能になっていました。相談したところ、不動産を活用した資金調達と法人用の資金調達を提案してもらいました。結果、1200万円あった借金は完済し、法人で調達した資金を使って、調達の返済額以上の資産を毎月構築して運用しながら暮らしています。
+              </p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-medium text-sm">J.U様</p>
+                <p class="text-xs sm:text-sm text-gray-500">50歳・個人事業主</p>
+              </div>
+              <div class="bg-blue-100 px-2 sm:px-3 py-1 rounded-full">
+                <p class="text-xs font-medium text-blue-800">資金調達成功</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 残りのお客様の声カードも同様に最適化 -->
+          <!-- 省略：同様のカードが続きます -->
+        </div>
+        <div class="mb-8">
+          <a href="https://lin.ee/a6iPVTy" class="bg-blue-700 hover:bg-blue-800 text-base sm:text-lg h-10 sm:h-12 px-4 sm:px-6 w-full sm:w-auto rounded-xl shadow-md transition-transform hover:scale-105 inline-flex items-center justify-center gap-2 text-white">
+            無料相談を申し込む
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-500">
+          お気軽にご相談ください。あなたの状況に合わせた最適な解決策をご提案します。
+          <br>
+          <a href="#" class="text-blue-700 hover:underline">
+            プライバシーポリシー
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t bg-white shadow-sm">
+    <div class="container mx-auto py-6 max-w-5xl">
+      <div class="flex flex-col items-center justify-center gap-4 text-center">
+        <div class="flex items-center gap-2">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          <span class="text-xl font-bold">BizCompass</span>
+        </div>
+        <p class="text-xs text-gray-500">
+          &copy; <span id="currentYear"></span> BizCompass. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LINE QRコード表示用モーダル -->
+  <div id="lineQrModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl p-6 max-w-sm w-full mx-4">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-bold">LINEで相談する</h3>
+        <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/line-qr.png" alt="LINE QRコード" class="w-48 h-48 mb-4">
+        <p class="text-sm text-gray-600 mb-4">QRコードをスキャンするか、下のボタンをタップしてください</p>
+        <a href="https://lin.ee/a6iPVTy" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md flex items-center gap-2 w-full justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.365 9.89c0-3.698-3.707-6.705-8.264-6.705-4.56 0-8.267 3.007-8.267 6.705 0 3.316 2.942 6.093 6.915 6.622.269.058.635.177.727.406.083.209.054.536.027.746 0 0-.1.6-.121.728-.037.209-.17.817.715.446.884-.372 4.772-2.811 6.508-4.812 1.2-1.318 1.76-2.652 1.76-4.136zm-11.514 2.514h-1.816c-.264 0-.479-.215-.479-.479v-3.568c0-.264.215-.478.479-.478h.328c.264 0 .478.214.478.478v2.609h1.01c.264 0 .479.214.479.478v.479c0 .264-.215.479-.479.479zm1.291 0c-.264 0-.479-.215-.479-.479v-3.568c0-.264.215-.478.479-.478h.328c.264 0 .478.214.478.478v3.568c0 .264-.214.479-.478.479h-.328zm3.318 0h-1.816c-.264 0-.479-.215-.479-.479v-3.568c0-.264.215-.478.479-.478h.328c.264 0 .478.214.478.478v2.609h1.01c.264 0 .479.214.479.478v.479c0 .264-.215.479-.479.479zm2.535-3.089c0 .264-.215.478-.479.478h-1.01v.61h1.01c.264 0 .479.215.479.479v.478c0 .264-.215.479-.479.479h-1.816c-.264 0-.479-.215-.479-.479v-3.568c0-.264.215-.478.479-.478h1.816c.264 0 .479.214.479.478v.479z"/>
+          </svg>
+          LINEで相談する
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript ファイル -->
+  <script src="js/script.js"></script>
+</body>
+</html>

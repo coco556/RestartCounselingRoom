@@ -1,0 +1,192 @@
+/* Base Styles */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #1d4ed8;
+  --primary-dark: #1e40af;
+  --secondary-color: #f59e0b;
+  --secondary-dark: #d97706;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --background-color: #f8fafc;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Custom Classes */
+.font-noto {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Responsive Text Sizes */
+.text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
+}
+
+.text-\[1\.25rem\] {
+  font-size: 1.25rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card .bg-slate-50 {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 150px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .testimonial-card .bg-slate-50 {
+    max-height: 120px;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .testimonial-card .bg-slate-50 {
+    max-height: 130px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Touch Optimizations */
+@media (hover: none) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+
+  .hover\:bg-blue-800:hover {
+    background-color: var(--primary-color);
+  }
+
+  .hover\:bg-amber-600:hover {
+    background-color: var(--secondary-color);
+  }
+
+  /* Increase touch target sizes */
+  button,
+  a.bg-blue-700,
+  a.bg-amber-500 {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Utility Classes */
+.xs\:text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.sm\:text-\[2\.25rem\] {
+  font-size: 2.25rem;
+}
+
+.md\:text-\[2\.5rem\] {
+  font-size: 2.5rem;
+}
+
+.lg\:text-\[3rem\] {
+  font-size: 3rem;
+}
+
+.sm\:text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
+.md\:text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.xs\:text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
+.sm\:text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.md\:text-\[2\.25rem\] {
+  font-size: 2.25rem;
+}
+
+/* Modal Styles */
+#lineQrModal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lineQrModal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lineQrModal .bg-white {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+#lineQrModal.active .bg-white {
+  transform: scale(1);
+}
